@@ -14,8 +14,9 @@ description: |
   RVA23S64 requirement.
 grade: devel
 confinement: devmode
-architectures:
-  - build-on: riscv64
+platforms:
+  riscv64:
+    build-on: riscv64
     build-for: riscv64
 
 apps:
