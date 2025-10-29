@@ -1,0 +1,28 @@
+type: app
+name: hello-rva23
+base: core26
+build-base: devel
+version: '2.12'
+summary: GNU Hello requiring RVA23S64 support
+description: |
+  GNU hello prints a friendly greeting.
+
+  Since Ubuntu 25.10 support for RVA23S64 is required on the RISC-V
+  architecture. This also applies to all snaps built using core 26.04.
+
+  This instance of a hello snap has been specifically built with the
+  RVA23S64 requirement.
+grade: devel
+confinement: devmode
+architectures:
+  - build-on: riscv64
+    build-for: riscv64
+
+apps:
+  hello:
+    command: bin/hello
+
+parts:
+  gnu-hello:
+    source: http://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz
+    plugin: autotools
