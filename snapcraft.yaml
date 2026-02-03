@@ -1,7 +1,10 @@
 type: app
 name: hello-rva23
 base: core26
+license: GPL-3.0
 build-base: devel
+source-code: http://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz
+website: https://github.com/xypron/hello-rva23
 version: '2.12'
 summary: GNU Hello requiring RVA23S64 support
 description: |
@@ -13,7 +16,7 @@ description: |
   This instance of a hello snap has been specifically built with the
   RVA23S64 requirement.
 grade: devel
-confinement: devmode
+confinement: strict
 platforms:
   riscv64:
     build-on: riscv64
