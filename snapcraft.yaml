@@ -21,9 +21,11 @@ platforms:
 
 apps:
   hello:
-    command: /usr/local/bin/hello
+    command: usr/bin/hello
 
 parts:
   gnu-hello:
     source: http://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz
     plugin: autotools
+    autotools-configure-parameters:
+      - --prefix=/usr/
