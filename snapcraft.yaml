@@ -21,7 +21,7 @@ platforms:
 
 apps:
   hello:
-    command: bin/hello
+    command: /usr/local/bin/hello
 
 parts:
   gnu-hello:
