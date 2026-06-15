@@ -14,7 +14,7 @@ description: |
 
   This instance of a hello snap has been specifically built with the
   RVA23S64 requirement.
-grade: devel
+grade: stable
 confinement: strict
 platforms:
   riscv64:
