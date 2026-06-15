@@ -2,7 +2,6 @@ type: app
 name: hello-rva23
 base: core26
 license: GPL-3.0
-build-base: devel
 source-code: https://github.com/xypron/hello-rva23.git
 website: https://github.com/xypron/hello-rva23
 version: '2.12-1'
