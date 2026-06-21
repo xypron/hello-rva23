@@ -5,7 +5,7 @@ license: GPL-3.0
 source-code: https://github.com/xypron/hello-rva23.git
 website: https://github.com/xypron/hello-rva23
 issues: https://github.com/xypron/hello-rva23/issues
-version: '2.12-2'
+version: '2.12-3'
 title: Hello RVA23
 summary: GNU Hello requiring RVA23S64 support
 description: |
@@ -22,6 +22,10 @@ platforms:
   riscv64:
     build-on: riscv64
     build-for: riscv64
+
+plugs:
+  kvm:
+    interface: kvm
 
 apps:
   hello:
