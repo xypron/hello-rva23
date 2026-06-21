@@ -5,6 +5,25 @@
  */
 
 #include <stdio.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+/**
+ * dev_kvm_exists_and_is_device() - check for kvm availability
+ *
+ * Return:	/dev/kvm exists and is a device
+ */
+bool dev_kvm_exists_and_is_device(void) {
+    struct stat st;
+
+    if (stat("/dev/kvm", &st) != 0) {
+        return false;
+    }
+
+    /* Character device node */
+    return S_ISCHR(st.st_mode);
+}
 
 /**
  * get_vlenb() - get the vector length in bits
@@ -62,6 +81,12 @@ static float min_float() {
 int main()
 {
 	printf("Welcome in a RISC-V world!\n\n");
+
+	if (dev_kvm_exists_and_is_device())
+		printf("KVM device is available\n");
+	else
+		printf("KVM device is missing\n");
+
 	printf("The vector length is %u bits\n", get_vlenb());
 	printf("fli.s min returned %e\n", min_float());
 	printf("fli.d min returned %e\n", min_double());
