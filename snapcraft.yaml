@@ -4,10 +4,12 @@ base: core26
 license: GPL-3.0
 source-code: https://github.com/xypron/hello-rva23.git
 website: https://github.com/xypron/hello-rva23
-version: '2.12-1'
+issues: https://github.com/xypron/hello-rva23/issues
+version: '2.12-2'
+title: Hello RVA23
 summary: GNU Hello requiring RVA23S64 support
 description: |
-  Hello-rva23 prints a friendly greeting.
+  Hello RVA23 prints a friendly greeting.
 
   Since Ubuntu 25.10 support for RVA23S64 is required on the RISC-V
   architecture. This also applies to all snaps built using core 26.04.
